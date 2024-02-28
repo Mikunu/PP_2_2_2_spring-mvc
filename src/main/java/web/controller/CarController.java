@@ -19,7 +19,7 @@ public class CarController {
     }
 
     @GetMapping()
-    public String showCars(@RequestParam(value = "amount", required = false) Integer amount, Model model) {
+    public String showCars(@RequestParam(value = "count", required = false) Integer amount, Model model) {
         if (amount == null || amount >= 5) {
             model.addAttribute("cars", carService.getAllCars());
         } else {
